@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Online Bookstore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.png'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            padding: 0 15px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Dropdown styling */
+        nav ul li .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        nav ul li .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: black;
+            text-decoration: none;
+        }
+
+        nav ul li:hover .dropdown-content {
+            display: block;
+        }
+
+        nav ul li .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Main Section */
+        section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: black;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="{% url 'home' %}"><img src="images/logo_.png" alt="Online Bookstore Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="trending.html">Trending Books</a></li>
+                <li class="dropdown">
+                    <a href="#">Genres</a>
+                    <div class="dropdown-content">
+                        <a href="Fiction.html">Fiction</a>
+                        <a href="Animation.html">Animation</a>
+                        <a href="Adventure.html">Adventure</a>
+                        <a href="Biography.html">Biography</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section>
+        <h1>About Us</h1>
+        <p>Welcome to our Online Bookstore, where passion meets literature. Our mission is to bring the joy of reading to people of all ages and backgrounds. We offer a wide variety of books across genres, ensuring there's something for everyone. Whether you're looking for the latest bestsellers, classic literature, or niche works, you'll find them here.</p>
+        <p>At our core, we believe that books are the gateway to knowledge, entertainment, and personal growth. With a user-friendly platform and efficient service, we strive to provide the best online shopping experience and easy access for book lovers around the globe.</p>
+        <p>Founded by a team of avid readers and tech enthusiasts, our bookstore is more than just a business – it’s a community of like-minded individuals who value the power of words and ideas.</p>
+        <p>Thank you for being part of our journey, and we hope you enjoy exploring the world through our collection of books!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="about.html">About Us</a> | 
+        <a href="contact.html">Contact Us</a> | 
+        <a href="policies.html">FAQ</a>
+    </footer>
+
+</body>
+</html>  

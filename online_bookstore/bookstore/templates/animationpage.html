@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Books</title>
+    <style>
+        body    {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.png'); /* Replace with your background image */
+            background-size: cover; /* Cover the entire page */
+            background-repeat: no-repeat; /* Prevent repeating */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff; /* White header */
+            padding: 10px;
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            padding: 0 15px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        /* Dropdown styles */
+        .dropdown-content {
+            display: none; /* Hidden by default */
+            position: absolute; /* Position it below the Genres link */
+            background-color: white; /* White background for dropdown */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            min-width: 160px; /* Minimum width */
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px; /* Spacing */
+            text-decoration: none;
+            display: block; /* Block display for items */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1; /* Light grey background on hover */
+        }
+
+        nav ul li:hover .dropdown-content {
+            display: block; /* Show dropdown on hover */
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .book-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .book {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
+
+        .book:hover {
+            transform: scale(1.05);
+        }
+
+        .book img {
+            width: 80px;
+            height: 120px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #ffffff; /* White footer */
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    {%load static%}
+    <header>
+        <div class="logo">
+            <a href="{% url 'home' %}"><img src="{% static 'images/logo_.png' %}" alt="Online Bookstore Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="trending.html">Trending Books</a></li>
+                <li class="dropdown">
+                    <a href="#">Genres</a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'fiction' %}">Fiction</a>
+                        <a href="{% url 'animation' %}">Animation</a>
+                        <a href="{% url 'adventure' %}">Adventure</a>
+                        <a href="{% url 'biography' %}">Biography</a> <!-- Added Biography -->
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Animation Books</h1>
+        <div class="book-container">
+            <div class="book">
+                <img src="images/animation1.png" alt="Animation Book 1">
+                <h3>Understanding Animation</h3>
+                <p>By Paul Wells</p>
+                <p>Price: $22.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation2.png" alt="Animation Book 2">
+                <h3>Animation: A World History</h3>
+                <p>By Giannalberto Bendazzi</p>
+                <p>Price: $35.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation3.png" alt="Animation Book 3">
+                <h3>The Animator's Survival Kit</h3>
+                <p>By Richard Williams</p>
+                <p>Price: $29.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation4.png" alt="Animation Book 4">
+                <h3>Animation Bootcamp</h3>
+                <p>By Dan Haring</p>
+                <p>Price: $24.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation5.png" alt="Animation Book 5">
+                <h3>Creating Characters with Personality</h3>
+                <p>By Tom Bancroft</p>
+                <p>Price: $18.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation6.png" alt="Animation Book 6">
+                <h3>Character Animation in Depth</h3>
+                <p>By Eric W. Smith</p>
+                <p>Price: $27.50</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation7.png" alt="Animation Book 7">
+                <h3>Cartoon Animation</h3>
+                <p>By Preston Blair</p>
+                <p>Price: $19.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation8.png" alt="Animation Book 8">
+                <h3>The Art of Animation</h3>
+                <p>By Bob Thomas</p>
+                <p>Price: $30.00</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation9.png" alt="Animation Book 9">
+                <h3>Animating Your Career</h3>
+                <p>By David B. Levy</p>
+                <p>Price: $23.75</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation10.png" alt="Animation Book 10">
+                <h3>Animation: From Pencils to Pixels</h3>
+                <p>By Tony White</p>
+                <p>Price: $32.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation11.png" alt="Animation Book 11">
+                <h3>The Art of 3D Computer Animation and Effects</h3>
+                <p>By Isaac Kerlow</p>
+                <p>Price: $45.00</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation12.png" alt="Animation Book 12">
+                <h3>Animating in Flash</h3>
+                <p>By Mike Wong</p>
+                <p>Price: $15.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation13.png" alt="Animation Book 13">
+                <h3>3D Animation Essentials</h3>
+                <p>By Andrew D. M. Phelps</p>
+                <p>Price: $34.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation14.png" alt="Animation Book 14">
+                <h3>The Animator's Sketchbook</h3>
+                <p>By Tony White</p>
+                <p>Price: $28.50</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation15.png" alt="Animation Book 15">
+                <h3>Animation: The Complete Guide</h3>
+                <p>By David B. Levy</p>
+                <p>Price: $39.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation16.png" alt="Animation Book 16">
+                <h3>Digital Animation Fundamentals</h3>
+                <p>By Michael W. D. Peters</p>
+                <p>Price: $24.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation17.png" alt="Animation Book 17">
+                <h3>Animation: A Reference Guide</h3>
+                <p>By Andrew Osmond</p>
+                <p>Price: $26.50</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation18.png" alt="Animation Book 18">
+                <h3>Directing Animation</h3>
+                <p>By Tony White</p>
+                <p>Price: $29.50</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation19.png" alt="Animation Book 19">
+                <h3>Animation for Beginners</h3>
+                <p>By David B. Levy</p>
+                <p>Price: $21.99</p>
+            </div>
+
+            <div class="book">
+                <img src="images/animation20.png" alt="Animation Book 20">
+                <h3>The Art of Disney: The Golden Age</h3>
+                <p>By Charles Solomon</p>
+                <p>Price: $39.99</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <p>&copy; 2024 Online Bookstore. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

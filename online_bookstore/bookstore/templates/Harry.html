@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex; /* Use flexbox to create a side-by-side layout */
+            align-items: center; /* Center items vertically */
+        }
+
+        .book-cover {
+            width: 40%; /* Set width for book cover */
+            max-width: 200px; 
+            margin-right: 20px; /* Add space between cover and content */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-details {
+            width: 60%; /* Set width for the content area */
+            text-align: left; /* Align text to the left */
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 26px;
+            margin: 15px 0;
+        }
+
+        h2 {
+            color: #555;
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #28a745; /* Green color for price */
+            margin: 10px 0;
+            font-weight: bold; /* Make price bold */
+        }
+
+        .payment-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .payment-button a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        button {
+            padding: 12px 28px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+{%load static%}
+<body>
+    <div class="container">
+        <img src="{% static 'images/Harry.jpg' %}" class="book-cover" alt="Book Cover">
+        <div class="book-details">
+            <h1>Harry Potter and the Sorcerer's Stone</h1>
+            <h2>J.K. Rowling</h2>
+            <p>Harry Potter and the Sorcerer's Stone is the first book in the renowned Harry Potter series written by J.K. Rowling. The story begins with Harry Potter, an orphaned boy who lives with his neglectful relatives, the Dursleys. On his eleventh birthday, Harry learns that he is a wizard and is invited to attend Hogwarts School of Witchcraft and Wizardry.
+
+                At Hogwarts, Harry befriends Ron Weasley and Hermione Granger, and together they uncover a mystery surrounding the theft of the Sorcerer's Stone, an object that grants immortality. They suspect that the dark wizard Lord Voldemort is plotting to find the stone and return to power..</p>
+            <div class="price">$9.99</div> <!-- Price element -->
+            <div class="payment-button">
+                <a href="{% url 'payharry' %}">
+                    <button>Pay to Read</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

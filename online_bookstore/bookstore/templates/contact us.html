@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Online Bookstore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.png'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo img {
+            width: 200px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            padding: 0 15px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Dropdown styling */
+        nav ul li .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        nav ul li .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            color: black;
+            text-decoration: none;
+        }
+
+        nav ul li:hover .dropdown-content {
+            display: block;
+        }
+
+        nav ul li .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Main Section */
+        section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-details, .map {
+            width: 48%;
+        }
+
+        .contact-details h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-details p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Center the map image */
+        .map {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .map img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: black;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo_.png" alt="Online Bookstore Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trending.html">Trending Books</a></li>
+                <li class="dropdown">
+                    <a href="#">Genres</a>
+                    <div class="dropdown-content">
+                        <a href="Fiction.html">Fiction</a>
+                        <a href="Animation.html">Animation</a>
+                        <a href="Adventure.html">Adventure</a>
+                        <a href="Biography.html">Biography</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Us Section -->
+    <section>
+        <div class="contact-details">
+            <h1>Contact Us</h1>
+            <p><strong>Our Office Address:</strong></p>
+            <p>Readwave<br>
+            Shanti Nagar<br>
+            Bengaluru, 560027</p>
+
+            <p><strong>Customer Support:</strong></p>
+            <p>Email: support@readwave.com<br>
+            Phone: 91 2318945679</p>
+
+            <p><strong>Business Hours:</strong></p>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+            Saturday: 10:00 AM - 4:00 PM<br>
+            Sunday: Closed</p>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="map">
+            <img src="images/map.png" alt="Map of Readwave Office Location"> <!-- Replace with your actual map image -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="about.html">About Us</a> | 
+        <a href="contact.html">Contact Us</a> | 
+        <a href="policies.html">FAQ</a>
+    </footer>
+
+</body>
+</html>

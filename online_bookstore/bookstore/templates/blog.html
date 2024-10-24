@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("background.png") no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* General navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Logo section */
+.logo img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Navigation links */
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links ul li {
+    margin-left: 30px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.nav-links ul li a:hover {
+    color: #007bff; /* Color on hover */
+}
+
+
+       
+
+        main {
+            padding: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #9a2d62;
+        }
+
+        /* Posted Blogs Section */
+        .blog-post {
+            background-color: rgba(50, 50, 50, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5em;
+            padding: 2em;
+            transition: transform 0.2s;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-post h3 {
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+            color: #850a60;
+        }
+
+        .blog-post p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        /* User Comments Section */
+        .user-comments {
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 2em;
+            background-color: #ece7e7;
+        }
+
+        .user-comments h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+            text-align: center;
+            color: #465a70;
+        }
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #53a39f;
+            color: white;
+            border: none;
+            padding: 0.75em 1.5em;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #df8da7;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 1.5em;
+            background-color: #f8f9fa; 
+            border-top: 0.5px solid #ccc;
+            color: #333;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer .footer-links a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        footer .footer-links a:hover {
+            color: blue;
+        }
+
+        footer .footer-links span {
+            margin: 0 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    {%load static%}
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="{% static 'images/logo_.png' %}" alt="Readwave Logo" />
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#">Trending Books</a></li>
+                    <li><a href="#">Genres</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Already Posted Blogs Section -->
+        <section class="posted-blogs">
+            <h1>Welcome to READWAVE. Here you can read as many blogs as you want and you can also write them too! So lets go ahead with reading the blogs then!</h1>
+            <article class="blog-post" id="sampleBlog1">
+                <h3>Exploring the World of Fiction</h3>
+                <p>
+                    Fiction books offer readers a journey into imagined worlds, rich with unique characters and plotlines.
+                    From fantasy realms to historical adventures, the possibilities are endless. 
+                    Fiction not only entertains but also enables readers to explore different perspectives and cultures.
+                    It's an invitation to think beyond the boundaries of reality, fueling our imagination.
+                </p>
+                <p> 
+                    Popular genres include fantasy, science fiction, mystery, and romance. Authors like J.K. Rowling, 
+                    George R.R. Martin, and Agatha Christie have captivated audiences with their compelling narratives.
+                    Engaging with fiction can enhance empathy, as readers become emotionally invested in characters' journeys.
+                </p>
+                <p><strong>Posted by:</strong> John Doe</p>
+            </article>
+
+            <article class="blog-post" id="sampleBlog2">
+                <h3>The Importance of Reading</h3>
+                <p>
+                    Reading is more than just a pastime. It allows us to expand our knowledge, improve our language skills, and connect
+                    with stories across the globe. It opens doors to new ideas, cultures, and experiences, broadening our horizons 
+                    and fostering understanding among diverse populations.
+                </p>
+                <p>
+                    Studies show that regular reading can enhance brain function, boost concentration, and even reduce stress. 
+                    Moreover, reading can be a source of inspiration and motivation, as many authors share their life stories 
+                    and experiences through their works. So, make reading a part of your daily routine!
+                </p>
+                <p><strong>Posted by:</strong> Jane Smith</p>
+            </article>
+
+            <article class="blog-post" id="sampleBlog3">
+                <h3>Top 5 Must-Read Books in 2024</h3>
+                <p>
+                    Looking for your next great read? Here are five must-read books that are taking the world by storm this year:
+                    1. *"Fourth Wing" by Rebecca Yarros* - A tale of bravery and sacrifice in a fantastical world.
+                    2. *"The Covenant of Water" by Abraham Verghese* - A multi-generational saga set in South India.
+                    3. *"Lessons in Chemistry" by Bonnie Garmus* - An empowering story of a female scientist breaking barriers in the 1960s.
+                    4. *"Happy Place" by Emily Henry* - A romantic comedy that explores the complexities of love and friendship.
+                    5. *"The Wishing Game" by Meg Shaffer* - A whimsical story about a teacher and her dream to fulfill a child's wish.
+                </p>
+                <p>
+                    These books not only entertain but also provoke thought and inspire action. Dive into these captivating narratives and find 
+                    out what makes them the talk of the literary world!
+                </p>
+                <p><strong>Posted by:</strong> Mark Johnson</p>
+            </article>
+            <article class="blog-post" id="sampleBlog4">
+                <h3>The Magic of Poetry</h3>
+                <p>
+                    Poetry is a unique form of expression that captures emotions and experiences in a few carefully chosen words. 
+                    From the rhythmic beauty of sonnets to the free-verse exploration of feelings, poetry allows us to delve into the 
+                    depths of human experience. It connects us through shared emotions, often providing solace during difficult times.
+                </p>
+                <p>
+                    Renowned poets like Rumi, Maya Angelou, and Robert Frost have left an indelible mark on the literary world, inspiring 
+                    readers to reflect on their lives and the world around them. Whether you’re a seasoned reader or new to poetry, 
+                    taking the time to explore its magic can enrich your life and broaden your perspective.
+                </p>
+                <p><strong>Posted by:</strong> Sarah Lee</p>
+            </article>
+            
+            <article class="blog-post" id="sampleBlog5">
+                <h3>Reading in the Digital Age</h3>
+                <p>
+                    With the rise of e-books and audiobooks, reading has transformed in the digital age. The convenience of having 
+                    multiple books available at our fingertips has made reading more accessible than ever before. 
+                    However, the experience of reading a physical book still holds a special place in many readers' hearts.
+                </p>
+                <p>
+                    This blog explores the pros and cons of digital reading versus traditional books. It discusses how technology 
+                    impacts our reading habits and the importance of finding a balance between digital and physical literature.
+                </p>
+                <p><strong>Posted by:</strong> David Kim</p>
+            </article>
+            
+            <article class="blog-post" id="sampleBlog6">
+                <h3>How to Cultivate a Reading Habit</h3>
+                <p>
+                    Developing a reading habit can be one of the most rewarding endeavors. It not only enhances knowledge but also 
+                    boosts creativity and reduces stress. Here are some tips to help you cultivate a consistent reading practice:
+                </p>
+                <p>
+                    1. Set a Reading Goal: Start with a goal of a certain number of books per month or a set amount of 
+                    time dedicated to reading each day.<br>
+                    2. Choose Books You Love: Read what interests you, whether it’s fiction, non-fiction, or graphic novels.<br>
+                    3. Join a Book Club: Engage with others who share your passion for reading; it can motivate you to read more.<br>
+                    4. Limit Distractions: Find a quiet spot where you can focus solely on your book.<br>
+                    5. Make Reading a Routine: Incorporate reading into your daily schedule, perhaps before bed or during lunch breaks.
+                </p>
+                <p>
+                    Remember, the goal is to enjoy the journey through literature, so make it fun and personal!
+                </p>
+                <p><strong>Posted by:</strong> Emily Nguyen</p>
+            </article>
+            
+
+            <div id="userBlogs"></div> <!-- Container for user-submitted blogs -->
+        </section>
+
+        <!-- Section for User to Write Their Own Views -->
+        <section class="user-comments">
+            <h2>Share Your Thoughts</h2>
+            <form id="commentForm">
+                <div class="form-group">
+                    <label for="blogTitle">Blog Title:</label>
+                    <input type="text" id="blogTitle" name="blogTitle" placeholder="Enter your blog title" required>
+                </div>
+                <div class="form-group">
+                    <label for="userName">Your Name:</label>
+                    <input type="text" id="userName" name="userName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="userComment">Your Blog or Comment:</label>
+                    <textarea id="userComment" name="userComment" rows="5" placeholder="Write your thoughts here..." required></textarea>
+                </div>
+                <button type="submit">Post Your Blog</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <span>|</span>
+            <a href="#">Contact Us</a>
+            <span>|</span>
+            <a href="#">FAQ</a>
+        </div>
+    </footer>
+
+    <script>
+        const commentForm = document.getElementById('commentForm');
+        const userBlogs = document.getElementById('userBlogs');
+
+        commentForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const blogTitle = document.getElementById('blogTitle').value;
+            const userName = document.getElementById('userName').value;
+            const userComment = document.getElementById('userComment').value;
+
+            const newBlogPost = document.createElement('article');
+            newBlogPost.classList.add('blog-post');
+
+            newBlogPost.innerHTML = `
+                <h3>${blogTitle}</h3>
+                <p>${userComment}</p>
+                <p><strong>Posted by:</strong> ${userName}</p>
+            `;
+
+            userBlogs.appendChild(newBlogPost);
+
+            // Reset form fields
+            commentForm.reset();
+        });
+    </script>
+</body>
+</html>

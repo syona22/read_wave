@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendations</title>
+    <style>
+        body {
+            background-image: url('C:\\Users\\SHONIMA SHAJI\\OneDrive\\Desktop\\Shonima IIISEM\\Cloud_project\\background-image_03.jfif'); /* Ensure the image file path is correct */
+            background-size: 100% 100%; /* Ensures the image fits the entire screen without repeating */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            background-position: center center; /* Centers the image */
+            background-attachment: fixed; /* Keeps the background fixed while scrolling */
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #FF69B4; /* LimeGreen */
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .book-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .book-card:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .book-info {
+            padding: 10px;
+        }
+        h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .star-rating {
+            color: #FFD700; /* Gold for star rating */
+        }
+        .actions {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #FF69B4; /* LimeGreen */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #FF69B4; /* Darker Green */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RECOMMENDED BOOKS
+            
+        </h1>
+        <div class="book-grid">
+            <!-- Book 1 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/61Yvcspk48L._SL500_.jpg" alt="The Invisible Life of Addie LaRue">
+                <div class="book-info">
+                    <h3>The Invisible Life of Addie LaRue</h3>
+                    <p>Year: 2020</p>
+                    <p>Author: V.E. Schwab</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/91bYsX41DVL._AC_UY436_FMwebp_QL65_.jpg" alt="Atomic Habits">
+                <div class="book-info">
+                    <h3>Atomic Habits</h3>
+                    <p>Year: 2018</p>
+                    <p>Author: James Clear</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/71aFt4+OTOL._AC_UY436_FMwebp_QL65_.jpg" alt="The Alchemist">
+                <div class="book-info">
+                    <h3>The Alchemist</h3>
+                    <p>Year: 1993</p>
+                    <p>Author: Paulo Coelho</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/713jIoMO3UL._AC_UF1000,1000_QL80_.jpg" alt="Sapiens">
+                <div class="book-info">
+                    <h3>Sapiens: A Brief History of Humankind</h3>
+                    <p>Year: 2014</p>
+                    <p>Author: Yuval Noah Harari</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/71QIkI8YetL._AC_UF1000,1000_QL80_.jpg" alt="Educated">
+                <div class="book-info">
+                    <h3>Educated</h3>
+                    <p>Year: 2018</p>
+                    <p>Author: Tara Westover</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 6 -->
+            <div class="book-card">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1668782119i/40097951.jpg" alt="The Silent Patient">
+                <div class="book-info">
+                    <h3>The Silent Patient</h3>
+                    <p>Year: 2019</p>
+                    <p>Author: Alex Michaelides</p>
+                    <p class="star-rating">⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 7 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/91ocU8970hL._AC_UY436_FMwebp_QL65_.jpg" alt="The Power of Now">
+                <div class="book-info">
+                    <h3>The Power of Now</h3>
+                    <p>Year: 2004</p>
+                    <p>Author: Eckhart Tolle</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 8 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/91rR9gMuOVL._AC_UF1000,1000_QL80_.jpg" alt="The Four Agreements">
+                <div class="book-info">
+                    <h3>The Four Agreements</h3>
+                    <p>Year: 1997</p>
+                    <p>Author: Don Miguel Ruiz</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 9 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/91JGwQlnu7L._AC_UF1000,1000_QL80_.jpg" alt="The Book Thief">
+                <div class="book-info">
+                    <h3>The Book Thief</h3>
+                    <p>Year: 2007</p>
+                    <p>Author: Markus Zusak</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 10 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/71rpa1-kyvL._AC_UF1000,1000_QL80_.jpg" alt="1984">
+                <div class="book-info">
+                    <h3>1984</h3>
+                    <p>Year: 1949</p>
+                    <p>Author: George Orwell</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+            
+      
+            <!-- Book 11 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/61Pqqc4muHL._AC_UF1000,1000_QL80_.jpg" alt="The Night Circus">
+                <div class="book-info">
+                    <h3>The Night Circus</h3>
+                    <p>Year: 2011</p>
+                    <p>Author: Erin Morgenstern</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 12 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/71AhaMqMsxL._AC_UF1000,1000_QL80_.jpg" alt="The Vanishing Half">
+                <div class="book-info">
+                    <h3>The Vanishing Half</h3>
+                    <p>Year: 2020</p>
+                    <p>Author: Brit Bennett</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 13 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/812XbpMDovL._AC_UF1000,1000_QL80_.jpg" alt="A Court of Mist and Fury">
+                <div class="book-info">
+                    <h3>A Court of Mist and Fury</h3>
+                    <p>Year: 2016</p>
+                    <p>Author: Sarah J. Maas</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 14 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/81JJPDNlxSL._AC_UF1000,1000_QL80_.jpg" alt="The Silent Patient">
+                <div class="book-info">
+                    <h3>The Silent Patient</h3>
+                    <p>Year: 2019</p>
+                    <p>Author: Alex Michaelides</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Book 15 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/81e+mSqZvnL._AC_UF1000,1000_QL80_.jpg" alt="Where the Crawdads Sing">
+                <div class="book-info">
+                    <h3>Where the Crawdads Sing</h3>
+                    <p>Year: 2018</p>
+                    <p>Author: Delia Owens</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 16 -->
+            <div class="book-card">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1688011813i/27362503.jpg" alt="It Ends with Us">
+                <div class="book-info">
+                    <h3>It Ends with Us</h3>
+                    <p>Year: 2016</p>
+                    <p>Author: Colleen Hoover</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 17 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/81N+sjNpGML._AC_UF1000,1000_QL80_.jpg" alt="Big Little Lies">
+                <div class="book-info">
+                    <h3>Big Little Lies</h3>
+                    <p>Year: 2014</p>
+                    <p>Author: Liane Moriarty</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 18 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/91N-qVY5CML._AC_UF1000,1000_QL80_.jpg" alt="The Giver of Stars">
+                <div class="book-info">
+                    <h3>The Giver of Stars</h3>
+                    <p>Year: 2019</p>
+                    <p>Author: Jojo Moyes</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 19 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/81sh+BJhaOS._AC_UF1000,1000_QL80_.jpg" alt="The Guest List">
+                <div class="book-info">
+                    <h3>The Guest List</h3>
+                    <p>Year: 2020</p>
+                    <p>Author: Lucy Foley</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book 20 -->
+            <div class="book-card">
+                <img src="https://m.media-amazon.com/images/I/715V5v7FviL._AC_UF1000,1000_QL80_.jpg" alt="The Wife Between Us">
+                <div class="book-info">
+                    <h3>The Wife Between Us</h3>
+                    <p>Year: 2018</p>
+                    <p>Author: Greer Hendricks & Sarah Pekkanen</p>
+                    <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                    <div class="actions">
+                        <a href="buynow.html"><button>Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
